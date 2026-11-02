@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Clever Brand Kit: head snippet -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#13172e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/cc-brand.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 101 116'%3E%3Cpolygon fill='%23AB2B4A' points='100.423 29.134 100.423 86.868 89.721 73.062 83.76 58.003 83.756 58.003 89.418 42.731'/%3E%3Cpolygon fill='%23E87A68' points='.429 29.134 .429 86.868 9.889 73.481 17.092 58.003 17.096 58.003 9.773 43.319'/%3E%3Cpolygon fill='%23D74D4E' points='83.756 58.003 52.241 60.003 17.092 58.003 31.76 29.134 50.426 .269 70.722 31.961'/%3E%3Cpolygon fill='%23BD3246' points='100.423 29.134 83.756 58.003 50.426 .269'/%3E%3Cpolygon fill='%23F19175' points='50.426 .269 17.092 58.003 .425 29.134'/%3E%3Cpolygon fill='%23CF3942' points='83.756 58.003 72.365 82.931 50.426 115.737 27.849 81.83 17.092 58.003'/%3E%3Cpolygon fill='%23E0625B' points='50.426 115.737 .425 86.868 17.092 58.003'/%3E%3Cpolygon fill='%239A244F' points='50.422 115.737 100.423 86.868 83.756 58.003'/%3E%3C/svg%3E">
+<!-- Demo universe: typewriter + stencil -->
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Big+Shoulders+Stencil:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/dossier.css">
+<title>This message will self-destruct | Bun + Materia KV</title>
+<meta name="description" content="One-time messages that burn after reading. Bun on Clever Cloud, messages held in Materia KV with a TTL and read once with GETDEL.">
+<meta name="referrer" content="no-referrer">
+<script type="module" src="/js/app.js"></script>
+</head>
+<body>
+
+<header class="cc-topbar">
+  <div class="cc-container cc-topbar__inner">
+    <a href="https://www.clever.cloud" target="_blank" rel="noopener" aria-label="Clever Cloud">
+<svg class="cc-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 116" role="img" aria-label="Clever Cloud">
+  <g fill="none">
+        <g fill="currentColor" transform="translate(129 35)">
+      <path d="M15.241,18.87 C10.52,18.87 7.335,22.47 7.335,27.013 C7.335,31.556 10.58,35.215 15.183,35.215 C18.074,35.215 20.375,34.212 22.145,32.442 L25.804,37.753 C23.562,40.232 19.49,42.002 15.005,42.002 C6.627,42.002 0.136,35.275 0.136,27.073 C0.136,18.812 6.627,12.086 14.888,12.086 C19.726,12.086 23.562,13.738 26.039,16.335 L21.909,21.468 C20.139,19.755 18.015,18.87 15.241,18.87 Z"/>
+      <polygon points="31.229 .578 38.428 .578 38.428 41.174 31.229 41.174"/>
+      <path d="M44.976,27.072 C44.976,18.811 51.112,12.085 59.255,12.085 C67.339,12.085 73.475,18.339 73.475,26.482 C73.475,27.367 73.416,28.37 73.298,28.842 L52.351,28.842 C53.059,32.795 56.069,35.628 60.435,35.628 C63.267,35.628 65.687,34.389 67.339,32.678 L71.056,37.575 C68.932,40.053 64.919,42 60.14,42 C51.348,42 44.976,35.274 44.976,27.072 Z M52.469,24.299 L66.1,24.299 C65.274,20.286 62.737,18.221 59.373,18.221 C55.773,18.221 53.295,20.699 52.469,24.299 Z"/>
+      <polygon points="104.864 12.911 94.656 41.175 85.333 41.175 75.065 12.911 82.972 12.911 90.17 34.743 97.487 12.911"/>
+      <path d="M106.867 27.072C106.867 18.811 113.003 12.085 121.146 12.085 129.23 12.085 135.366 18.339 135.366 26.482 135.366 27.367 135.307 28.37 135.189 28.842L114.242 28.842C114.95 32.795 117.96 35.628 122.326 35.628 125.158 35.628 127.578 34.389 129.23 32.678L132.947 37.575C130.823 40.053 126.81 42 122.031 42 113.239 42 106.867 35.274 106.867 27.072zM114.36 24.299L127.991 24.299C127.165 20.286 124.628 18.221 121.264 18.221 117.665 18.221 115.187 20.699 114.36 24.299zM148.758 41.174L141.56 41.174 141.56 12.91 148.758 12.91 148.758 15.978C150.351 13.618 152.711 12.083 155.661 12.083 157.55 12.083 159.084 12.614 160.205 13.499L157.195 20.344C156.252 19.577 154.836 19.105 153.478 19.105 150.586 19.105 148.757 21.524 148.757 25.36L148.757 41.174 148.758 41.174zM191.415 18.87C186.694 18.87 183.508 22.47 183.508 27.013 183.508 31.556 186.753 35.215 191.356 35.215 194.248 35.215 196.548 34.212 198.319 32.442L201.977 37.753C199.735 40.232 195.664 42.002 191.179 42.002 182.8 42.002 176.31 35.275 176.31 27.073 176.31 18.812 182.8 12.086 191.061 12.086 195.9 12.086 199.735 13.738 202.213 16.335L198.082 21.468C196.312 19.755 194.188 18.87 191.415 18.87z"/>
+      <polygon points="207.402 .578 214.6 .578 214.6 41.174 207.402 41.174"/>
+      <path d="M221.148 27.072C221.148 18.811 227.639 12.085 235.84 12.085 244.042 12.085 250.592 18.812 250.592 27.072 250.592 35.274 244.042 42.001 235.84 42.001 227.64 42 221.148 35.274 221.148 27.072zM243.335 27.013C243.335 22.47 240.207 18.87 235.9 18.87 231.533 18.87 228.347 22.47 228.347 27.013 228.347 31.556 231.533 35.215 235.9 35.215 240.207 35.215 243.335 31.556 243.335 27.013zM263.924 28.193C263.924 32.323 266.343 35.097 269.943 35.097 273.542 35.097 275.962 32.324 275.962 28.193L275.962 12.911 283.16 12.911 283.16 28.724C283.16 36.631 277.909 41.882 269.943 41.882 261.977 41.882 256.725 36.631 256.725 28.724L256.725 12.911 263.924 12.911 263.924 28.193zM318.795.578L318.795 41.174 311.537 41.174 311.537 38.106C309.472 40.525 306.58 42.001 302.922 42.001 295.429 42.001 289.351 35.864 289.351 27.072 289.351 18.516 295.075 12.085 302.922 12.085 306.64 12.085 309.53 13.442 311.537 15.743L311.537.578 318.795.578zM311.537 27.013C311.537 22.47 308.409 18.87 304.102 18.87 299.735 18.87 296.549 22.47 296.549 27.013 296.549 31.556 299.735 35.215 304.102 35.215 308.409 35.215 311.537 31.556 311.537 27.013z"/>
+    </g>
+    <polygon fill="#AB2B4A" points="100.423 29.134 100.423 86.868 89.721 73.062 83.76 58.003 83.756 58.003 89.418 42.731"/><polygon fill="#E87A68" points=".429 29.134 .429 86.868 9.889 73.481 17.092 58.003 17.096 58.003 9.773 43.319"/><polygon fill="#D74D4E" points="83.756 58.003 52.241 60.003 17.092 58.003 31.76 29.134 50.426 .269 70.722 31.961"/><polygon fill="#BD3246" points="100.423 29.134 83.756 58.003 50.426 .269"/><polygon fill="#F19175" points="50.426 .269 17.092 58.003 .425 29.134"/><polygon fill="#CF3942" points="83.756 58.003 72.365 82.931 50.426 115.737 27.849 81.83 17.092 58.003"/><polygon fill="#E0625B" points="50.426 115.737 .425 86.868 17.092 58.003"/><polygon fill="#9A244F" points="50.422 115.737 100.423 86.868 83.756 58.003"/>
+  </g>
+</svg>
+    </a>
+    <span class="cc-topbar__sep"></span>
+    <div class="cc-topbar__demo"><small>Demo</small>Bun + Materia KV</div>
+    <span class="cc-topbar__spacer"></span>
+    <nav class="cc-topbar__nav" aria-label="Status">
+      <span class="cc-pill cc-pill--mono cc-hide-sm" id="stackPill">Bun + Materia KV</span>
+      <span class="cc-pill cc-pill--live"><span class="cc-dot"></span>Live on Clever Cloud</span>
+      <a class="cc-pill cc-pill--gradient" href="https://academy.clever.cloud/" target="_blank" rel="noopener">Get certified ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="desk">
+
+  <section class="intro cc-container" aria-labelledby="title">
+    <h1 id="title" class="intro__title" aria-label="This message will self-destruct."><span class="intro__typed" aria-hidden="true">This message will self‑destruct.</span></h1>
+    <div class="intro__copy">
+      <p class="intro__lead" data-scene="compose">Write a note, light a fuse, hand over the link. The note waits in <strong>Materia KV</strong> with a time to live. The first person who opens it runs <code>GETDEL</code>: one read, and the key is gone for good.</p>
+      <p class="intro__lead" data-scene="read" hidden>Someone left you a dossier in <strong>Materia KV</strong>. You can open it once. Opening runs <code>GETDEL</code>, which returns the message and deletes it in the same step.</p>
+    </div>
+
+    <div class="instruments" aria-label="Live counters">
+      <figure class="counter">
+        <div class="counter__wheels" id="burnedWheels" aria-hidden="true"></div>
+        <figcaption><span class="sr-only" id="burnedText">0</span>Messages burned</figcaption>
+      </figure>
+      <figure class="gauge">
+        <svg class="gauge__dial" viewBox="0 0 200 126" aria-hidden="true">
+          <path class="gauge__face" d="M10 106 A90 90 0 0 1 190 106 Z"/>
+          <g class="gauge__ticks" id="gaugeTicks"></g>
+          <text class="gauge__min" x="14" y="123" text-anchor="middle">0</text>
+          <text class="gauge__max" id="gaugeMax" x="186" y="123" text-anchor="middle">10</text>
+          <g class="gauge__needle" id="gaugeNeedle"><path d="M100 106 L97 104 L100 30 L103 104 Z"/></g>
+          <circle class="gauge__hub" cx="100" cy="106" r="7"/>
+        </svg>
+        <figcaption><b class="gauge__value" id="activeCount">0</b> dead drops active right now</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="workbench cc-container">
+    <div class="workbench__main">
+
+      <!-- Scene 1: leave a message -->
+      <section class="folder" id="compose" data-scene="compose" aria-label="Leave a message">
+        <div class="folder__tab"><span>Dead drop</span></div>
+        <div class="folder__body">
+
+          <div class="folder__flap">
+            <div class="slip" id="slip">
+              <span class="slip__clip" aria-hidden="true"></span>
+              <fieldset class="fuse" id="fuseSet">
+                <legend>Burn it</legend>
+                <label class="fuse__opt"><input type="radio" name="fuse" value="read" checked><span class="fuse__box" aria-hidden="true"></span><span>On first read<small>Unread notes burn after 24 h</small></span></label>
+                <label class="fuse__opt"><input type="radio" name="fuse" value="30s"><span class="fuse__box" aria-hidden="true"></span><span>After 30 seconds</span></label>
+                <label class="fuse__opt"><input type="radio" name="fuse" value="5m"><span class="fuse__box" aria-hidden="true"></span><span>After 5 minutes</span></label>
+                <label class="fuse__opt"><input type="radio" name="fuse" value="1h"><span class="fuse__box" aria-hidden="true"></span><span>After 1 hour</span></label>
+              </fieldset>
+              <p class="slip__rule">Whatever you pick, the first reader burns it.</p>
+
+              <div class="receipt" id="receipt" hidden>
+                <p class="receipt__title">Dossier <b id="receiptCode">0000</b> is sealed.</p>
+                <p class="receipt__hint">Hand over this link. It works once.</p>
+                <div class="receipt__link">
+                  <input id="receiptLink" type="text" readonly aria-label="One-time link">
+                  <button class="btn-ink" id="copyLink" type="button">Copy link</button>
+                </div>
+                <p class="receipt__status" id="receiptStatus" aria-live="polite"></p>
+                <div class="receipt__actions">
+                  <a class="btn-ink btn-ink--ghost" id="openSelf" href="/r" target="_blank" rel="noopener">Open it yourself</a>
+                  <button class="btn-ink btn-ink--ghost" id="again" type="button">Leave another message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="sheet" id="composeForm" novalidate>
+            <div class="sheet__head">
+              <span>To: whoever holds the link</span>
+              <span>File: <b id="fileNo">pending</b></span>
+            </div>
+            <label class="sr-only" for="message">Your message</label>
+            <div class="sheet__writing">
+              <textarea id="message" name="message" rows="9" placeholder="Type your message. It burns after one read." spellcheck="false"></textarea>
+              <div class="sheet__sealed" id="sealedText" hidden></div>
+            </div>
+            <div class="sheet__foot">
+              <button class="link-btn" id="sample" type="button">Use a sample briefing</button>
+              <span class="sheet__bytes" id="bytes">0 / 2048 bytes</span>
+            </div>
+            <p class="sheet__error" id="composeError" role="alert" hidden></p>
+            <button class="seal-btn" id="sealBtn" type="submit">Seal the dossier</button>
+            <svg class="stamp" id="stamp" viewBox="0 0 330 92" aria-hidden="true"><use href="#stamp-confidential"/></svg>
+          </form>
+
+        </div>
+      </section>
+
+      <!-- Scene 2: read a message once -->
+      <section class="reader" id="reader" data-scene="read" hidden aria-label="Read the message">
+        <div class="stage" id="stage">
+
+          <div class="cover" id="cover">
+            <div class="cover__tab"><span>Eyes only</span></div>
+            <div class="cover__face">
+              <svg class="stamp stamp--cover" viewBox="0 0 330 92" aria-hidden="true"><use href="#stamp-confidential"/></svg>
+              <p class="cover__file">Dossier <b id="coverCode">····</b></p>
+              <p class="cover__fuse" id="coverFuse">Checking the dead drop…</p>
+              <button class="seal-btn" id="breakSeal" type="button" disabled>Break the seal</button>
+              <p class="cover__note">Opening it destroys it. Nobody, you included, can read it twice.</p>
+            </div>
+          </div>
+
+          <article class="sheet sheet--read" id="readSheet" hidden>
+            <div class="sheet__head sheet__head--read">
+              <span>From: <i class="redact" title="Not stored">████████</i></span>
+              <span>File: <b id="readCode">0000</b></span>
+              <span>Sealed: <b id="readSealed">--:--</b></span>
+              <span>Opened: <b id="readOpened">--:--</b></span>
+            </div>
+            <p class="sheet__message" id="readText"></p>
+            <div class="fuse-line" id="fuseLine" hidden>
+              <p class="fuse-line__count" aria-live="polite">This message will self-destruct in <b id="fuseCount">10</b>&nbsp;s</p>
+              <div class="fuse-line__actions">
+                <button class="btn-ink btn-ink--ghost" id="copyMsg" type="button">Copy message</button>
+                <button class="btn-ink" id="burnNow" type="button">Burn it now</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="aftermath" id="aftermath" hidden>
+            <svg class="stamp stamp--burned" viewBox="0 0 330 92" aria-hidden="true"><use href="#stamp-destroyed"/></svg>
+            <h2 class="aftermath__title" id="afterTitle">This message has self-destructed.</h2>
+            <p class="aftermath__text" id="afterText"></p>
+            <a class="seal-btn seal-btn--link" href="/">Leave your own message</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="board" aria-labelledby="boardTitle">
+        <div class="board__head">
+          <h2 id="boardTitle">Waiting in Materia KV</h2>
+          <p>Each tag counts down from its key's TTL. Contents stay sealed.</p>
+        </div>
+        <ol class="board__tags" id="board"></ol>
+        <p class="board__empty" id="boardEmpty" hidden>No dead drop is waiting. Seal one.</p>
+      </section>
+    </div>
+
+    <aside class="wire" aria-labelledby="wireTitle">
+      <div class="wire__head">
+        <h2 id="wireTitle">Intercepted wire</h2>
+        <p>Every command this app sends to Materia KV, with its round trip.</p>
+        <p class="wire__link" id="wireEndpoint">Bun RedisClient over TLS</p>
+        <div class="replicas" id="replicas" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="wire__fact">Each <b>OK</b> means the write is already copied to 3 datacenters in Paris. Serverless: no instance to size.</p>
+      </div>
+      <div class="wire__roll" id="wireRoll">
+        <ol class="wire__lines" id="wireLines" role="log" aria-live="off"></ol>
+      </div>
+    </aside>
+  </div>
+
+  <section class="cc-container platform">
+    <div class="cc-platform">
+      <div class="cc-platform__head">
+        <h3>Running on Clever Cloud</h3>
+        <span class="cc-pill cc-pill--ok"><span class="cc-dot"></span><span id="kvState">Materia KV</span></span>
+      </div>
+      <dl class="cc-kv" id="platformVars"></dl>
+      <div class="cc-platform__foot">Variables injected by the platform, see the <a href="https://www.clever.cloud/developers/doc/reference/reference-environment-variables/" target="_blank" rel="noopener">reference</a>. Nothing else is read for display.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="cc-footer">
+  <div class="cc-container">
+    <div class="cc-footer__inner">
+      <div class="cc-footer__brand">
+<svg class="cc-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 116" role="img" aria-label="Clever Cloud">
+  <g fill="none">
+        <g fill="currentColor" transform="translate(129 35)">
+      <path d="M15.241,18.87 C10.52,18.87 7.335,22.47 7.335,27.013 C7.335,31.556 10.58,35.215 15.183,35.215 C18.074,35.215 20.375,34.212 22.145,32.442 L25.804,37.753 C23.562,40.232 19.49,42.002 15.005,42.002 C6.627,42.002 0.136,35.275 0.136,27.073 C0.136,18.812 6.627,12.086 14.888,12.086 C19.726,12.086 23.562,13.738 26.039,16.335 L21.909,21.468 C20.139,19.755 18.015,18.87 15.241,18.87 Z"/>
+      <polygon points="31.229 .578 38.428 .578 38.428 41.174 31.229 41.174"/>
+      <path d="M44.976,27.072 C44.976,18.811 51.112,12.085 59.255,12.085 C67.339,12.085 73.475,18.339 73.475,26.482 C73.475,27.367 73.416,28.37 73.298,28.842 L52.351,28.842 C53.059,32.795 56.069,35.628 60.435,35.628 C63.267,35.628 65.687,34.389 67.339,32.678 L71.056,37.575 C68.932,40.053 64.919,42 60.14,42 C51.348,42 44.976,35.274 44.976,27.072 Z M52.469,24.299 L66.1,24.299 C65.274,20.286 62.737,18.221 59.373,18.221 C55.773,18.221 53.295,20.699 52.469,24.299 Z"/>
+      <polygon points="104.864 12.911 94.656 41.175 85.333 41.175 75.065 12.911 82.972 12.911 90.17 34.743 97.487 12.911"/>
+      <path d="M106.867 27.072C106.867 18.811 113.003 12.085 121.146 12.085 129.23 12.085 135.366 18.339 135.366 26.482 135.366 27.367 135.307 28.37 135.189 28.842L114.242 28.842C114.95 32.795 117.96 35.628 122.326 35.628 125.158 35.628 127.578 34.389 129.23 32.678L132.947 37.575C130.823 40.053 126.81 42 122.031 42 113.239 42 106.867 35.274 106.867 27.072zM114.36 24.299L127.991 24.299C127.165 20.286 124.628 18.221 121.264 18.221 117.665 18.221 115.187 20.699 114.36 24.299zM148.758 41.174L141.56 41.174 141.56 12.91 148.758 12.91 148.758 15.978C150.351 13.618 152.711 12.083 155.661 12.083 157.55 12.083 159.084 12.614 160.205 13.499L157.195 20.344C156.252 19.577 154.836 19.105 153.478 19.105 150.586 19.105 148.757 21.524 148.757 25.36L148.757 41.174 148.758 41.174zM191.415 18.87C186.694 18.87 183.508 22.47 183.508 27.013 183.508 31.556 186.753 35.215 191.356 35.215 194.248 35.215 196.548 34.212 198.319 32.442L201.977 37.753C199.735 40.232 195.664 42.002 191.179 42.002 182.8 42.002 176.31 35.275 176.31 27.073 176.31 18.812 182.8 12.086 191.061 12.086 195.9 12.086 199.735 13.738 202.213 16.335L198.082 21.468C196.312 19.755 194.188 18.87 191.415 18.87z"/>
+      <polygon points="207.402 .578 214.6 .578 214.6 41.174 207.402 41.174"/>
+      <path d="M221.148 27.072C221.148 18.811 227.639 12.085 235.84 12.085 244.042 12.085 250.592 18.812 250.592 27.072 250.592 35.274 244.042 42.001 235.84 42.001 227.64 42 221.148 35.274 221.148 27.072zM243.335 27.013C243.335 22.47 240.207 18.87 235.9 18.87 231.533 18.87 228.347 22.47 228.347 27.013 228.347 31.556 231.533 35.215 235.9 35.215 240.207 35.215 243.335 31.556 243.335 27.013zM263.924 28.193C263.924 32.323 266.343 35.097 269.943 35.097 273.542 35.097 275.962 32.324 275.962 28.193L275.962 12.911 283.16 12.911 283.16 28.724C283.16 36.631 277.909 41.882 269.943 41.882 261.977 41.882 256.725 36.631 256.725 28.724L256.725 12.911 263.924 12.911 263.924 28.193zM318.795.578L318.795 41.174 311.537 41.174 311.537 38.106C309.472 40.525 306.58 42.001 302.922 42.001 295.429 42.001 289.351 35.864 289.351 27.072 289.351 18.516 295.075 12.085 302.922 12.085 306.64 12.085 309.53 13.442 311.537 15.743L311.537.578 318.795.578zM311.537 27.013C311.537 22.47 308.409 18.87 304.102 18.87 299.735 18.87 296.549 22.47 296.549 27.013 296.549 31.556 299.735 35.215 304.102 35.215 308.409 35.215 311.537 31.556 311.537 27.013z"/>
+    </g>
+    <polygon fill="#AB2B4A" points="100.423 29.134 100.423 86.868 89.721 73.062 83.76 58.003 83.756 58.003 89.418 42.731"/><polygon fill="#E87A68" points=".429 29.134 .429 86.868 9.889 73.481 17.092 58.003 17.096 58.003 9.773 43.319"/><polygon fill="#D74D4E" points="83.756 58.003 52.241 60.003 17.092 58.003 31.76 29.134 50.426 .269 70.722 31.961"/><polygon fill="#BD3246" points="100.423 29.134 83.756 58.003 50.426 .269"/><polygon fill="#F19175" points="50.426 .269 17.092 58.003 .425 29.134"/><polygon fill="#CF3942" points="83.756 58.003 72.365 82.931 50.426 115.737 27.849 81.83 17.092 58.003"/><polygon fill="#E0625B" points="50.426 115.737 .425 86.868 17.092 58.003"/><polygon fill="#9A244F" points="50.422 115.737 100.423 86.868 83.756 58.003"/>
+  </g>
+</svg>
+        <p>European PaaS, fully managed. Push your code, the platform runs it.</p>
+        <div class="cc-trust"><span>ISO 27001</span><span>HDS</span><span>HOSTED IN FRANCE</span></div>
+      </div>
+      <div>
+        <h4>This demo</h4>
+        <ul>
+          <li><a href="https://www.clever.cloud/developers/doc/deploy/applications/nodejs/" target="_blank" rel="noopener">Node.js &amp; Bun runtime</a></li>
+          <li><a href="https://www.clever.cloud/developers/doc/deploy/databases/materia-kv/" target="_blank" rel="noopener">Materia KV</a></li>
+          <li><a href="https://bun.sh/docs/api/redis" target="_blank" rel="noopener">Bun Redis client</a></li>
+        </ul>
+      </div>
+      <div class="academy">
+<svg class="academy__badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Badge Certification Clever Cloud">
+  <defs>
+    <linearGradient id="ccBadgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f57461"/><stop offset="0.5" stop-color="#cb1c42"/><stop offset="1" stop-color="#a51050"/>
+    </linearGradient>
+    <path id="ccBadgeRing" d="M110,110 m-84,0 a84,84 0 1,1 168,0 a84,84 0 1,1 -168,0"/>
+  </defs>
+  <circle cx="110" cy="110" r="107" fill="#0e1124" stroke="url(#ccBadgeGrad)" stroke-width="4"/>
+  <circle cx="110" cy="110" r="97" fill="none" stroke="rgba(222,221,238,0.2)" stroke-width="1" stroke-dasharray="2 5"/>
+  <circle cx="110" cy="110" r="66" fill="#1c2045" stroke="rgba(222,221,238,0.16)"/>
+  <text font-family="'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif" font-size="12.5" font-weight="700" letter-spacing="3" fill="#deddee" textLength="524" lengthAdjust="spacing">
+    <textPath href="#ccBadgeRing" textLength="524" lengthAdjust="spacing">CERTIFIED · CLEVER CLOUD · ACADEMY · CERTIFIED · CLEVER CLOUD · ACADEMY · </textPath>
+  </text>
+  <g transform="translate(110 103) scale(0.6) translate(-50.4 -58)">
+    <polygon fill="#AB2B4A" points="100.423 29.134 100.423 86.868 89.721 73.062 83.76 58.003 83.756 58.003 89.418 42.731"/><polygon fill="#E87A68" points=".429 29.134 .429 86.868 9.889 73.481 17.092 58.003 17.096 58.003 9.773 43.319"/><polygon fill="#D74D4E" points="83.756 58.003 52.241 60.003 17.092 58.003 31.76 29.134 50.426 .269 70.722 31.961"/><polygon fill="#BD3246" points="100.423 29.134 83.756 58.003 50.426 .269"/><polygon fill="#F19175" points="50.426 .269 17.092 58.003 .425 29.134"/><polygon fill="#CF3942" points="83.756 58.003 72.365 82.931 50.426 115.737 27.849 81.83 17.092 58.003"/><polygon fill="#E0625B" points="50.426 115.737 .425 86.868 17.092 58.003"/><polygon fill="#9A244F" points="50.422 115.737 100.423 86.868 83.756 58.003"/>
+  </g>
+  <circle cx="110" cy="158" r="10" fill="url(#ccBadgeGrad)"/>
+  <path d="M105 158l3.5 3.5 6.5-6.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <div>
+          <h4>Clever Cloud Academy</h4>
+          <ul>
+            <li><a class="is-cert" href="https://academy.clever.cloud/" target="_blank" rel="noopener">Get certified ↗</a></li>
+            <li><a href="https://www.clever.cloud" target="_blank" rel="noopener">clever.cloud</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cc-footer__bottom"><span>Demo built by the Clever Cloud presales team</span><span>© 2026 Clever Cloud</span></div>
+  </div>
+</footer>
+
+<!-- Rubber stamps, drawn once and reused -->
+<svg class="sr-only" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink" x="-5%" y="-10%" width="110%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.8 1.75" result="holes"/>
+      <feComposite in="SourceGraphic" in2="holes" operator="in" result="speckled"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="9" result="wobble"/>
+      <feDisplacementMap in="speckled" in2="wobble" scale="3.5"/>
+    </filter>
+    <symbol id="stamp-confidential" viewBox="0 0 330 92">
+      <g filter="url(#ink)" fill="none" stroke="currentColor">
+        <rect x="5" y="5" width="320" height="82" rx="6" stroke-width="5"/>
+        <rect x="13" y="13" width="304" height="66" rx="3" stroke-width="2"/>
+        <text x="165" y="64" fill="currentColor" stroke="none" text-anchor="middle" textLength="276" lengthAdjust="spacingAndGlyphs" font-family="'Big Shoulders Stencil', Impact, sans-serif" font-weight="900" font-size="50">CONFIDENTIAL</text>
+      </g>
+    </symbol>
+    <symbol id="stamp-destroyed" viewBox="0 0 330 92">
+      <g filter="url(#ink)" fill="none" stroke="currentColor">
+        <rect x="5" y="5" width="320" height="82" rx="6" stroke-width="5"/>
+        <rect x="13" y="13" width="304" height="66" rx="3" stroke-width="2"/>
+        <text x="165" y="63" fill="currentColor" stroke="none" text-anchor="middle" textLength="282" lengthAdjust="spacingAndGlyphs" font-family="'Big Shoulders Stencil', Impact, sans-serif" font-weight="900" font-size="46">SELF-DESTRUCTED</text>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+</body>
+</html>

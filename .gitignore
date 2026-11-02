@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+build
+out
+coverage
+*.tsbuildinfo
+
+# Environment (keep the example)
+.env*
+!.env.example
+
+# Clever Cloud link
+.clever.json
+
+# Local screenshots scratch and logs
+*.log
+.local
+
+# OS files
+.DS_Store
+Thumbs.db
