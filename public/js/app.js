@@ -54,6 +54,11 @@ async function loadPlatform() {
   };
   try {
     const p = await (await fetch("/api/platform")).json();
+    const live = Boolean(p.APP_ID); // Clever Cloud injects APP_ID; without it this is a local run
+    $("liveText").textContent = live ? "Live on Clever Cloud" : "Local · not on Clever Cloud";
+    $("livePill").classList.toggle("cc-pill--live", live);
+    $("livePill").classList.toggle("cc-pill--muted", !live);
+    $("livePill").firstElementChild.classList.toggle("cc-dot--muted", !live);
     const dl = $("platformVars");
     for (const [key, label] of Object.entries(labels)) {
       const box = document.createElement("div");

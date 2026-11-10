@@ -5,7 +5,7 @@ import { RedisClient, type Subprocess } from "bun";
 import { lookupHash } from "../src/crypto";
 
 const hasRedis = Bun.which("redis-server") !== null;
-let redis: Subprocess, app: Subprocess, kv: RedisClient, base = "";
+let redis: Subprocess, app: Subprocess, kv: RedisClient, base = "", kvPort = 0;
 
 async function freePort(): Promise<number> {
   for (let i = 0; i < 50; i++) {
@@ -32,7 +32,8 @@ const post = (path: string, body: unknown) =>
 
 describe.skipIf(!hasRedis)("dead drop API", () => {
   beforeAll(async () => {
-    const redisPort = await freePort();
+    const redisPort = kvPort = await freePort();
+    delete process.env.APP_ID; // the suite describes a local run
     redis = Bun.spawn(["redis-server", "--port", String(redisPort), "--save", "", "--appendonly", "no"], { stdout: "ignore" });
     const url = `redis://127.0.0.1:${redisPort}`;
     kv = new RedisClient(url);
@@ -131,6 +132,25 @@ describe.skipIf(!hasRedis)("dead drop API", () => {
       ["APP_ID", "CC_APP_NAME", "CC_COMMIT_ID", "CC_DEPLOYMENT_ID", "CC_PRETTY_INSTANCE_NAME", "INSTANCE_NUMBER", "INSTANCE_TYPE", "bun", "kv"].sort(),
     );
     expect(JSON.stringify(p)).not.toContain("redis://");
+  });
+
+  test("the header pill says Live only when APP_ID is injected, Local otherwise", async () => {
+    expect((await (await fetch(`${base}/api/platform`)).json()).APP_ID).toBeNull();
+    const html = await (await fetch(`${base}/`)).text();
+    expect(html).not.toContain("Live on Clever Cloud"); // the page never claims it before asking
+    const js = await (await fetch(`${base}/js/app.js`)).text();
+    expect(js).toContain('live ? "Live on Clever Cloud" : "Local · not on Clever Cloud"');
+
+    const port = await freePort();
+    const onClever = Bun.spawn(["bun", "src/server.ts"], {
+      env: { ...process.env, PORT: String(port), REDIS_URL: `redis://127.0.0.1:${kvPort}`, APP_ID: "app_test" }, stdout: "ignore", stderr: "inherit",
+    });
+    try {
+      await until(async () => (await fetch(`http://127.0.0.1:${port}/health`)).ok);
+      expect((await (await fetch(`http://127.0.0.1:${port}/api/platform`)).json()).APP_ID).toBe("app_test");
+    } finally {
+      onClever.kill();
+    }
   });
 
   test("rate limit: a burst of seals from one address is throttled", async () => {
