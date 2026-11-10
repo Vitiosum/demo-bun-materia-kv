@@ -2,6 +2,8 @@
 
 > A spy dead drop for one-time messages. Write a note, light a fuse, hand over the link. The note waits in **Materia KV** with a TTL; the first person who opens it runs `GETDEL`, reads it once on a typewriter, and watches it burn. A second visit finds only ash. A line-printer "intercepted wire" prints every command the app sends to Materia KV, with its real round trip.
 
+![Dead drop, run locally against a local Redis in place of Materia KV: a dossier is sealed, opened once with GETDEL, typed out, then burned while the wire log prints each command](docs/tour.gif)
+
 ![The message burns after reading, while the wire log shows GETDEL, SREM and INCR](docs/screenshot-burn.jpg)
 
 | Leave a message | On a phone |
